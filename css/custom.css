@@ -1,0 +1,96 @@
+#chatWhatsApp {
+    width: 64px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+/* Header */
+header {
+    background-image: url(../image/recursos/header.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Carrito */
+#imageCarritovacio {
+    width: 100%;
+}
+
+#VentanaCarrito span{
+    font-size: 1em;
+}
+
+#VentanaCarrito .precioDescuento, #VentanaCarrito .precioFinal{
+    font-size: 1.5em;
+    text-align:  right;
+}
+
+/* articulo */
+article {
+    margin-bottom: 2em;
+    box-sizing: border-box;
+    border: 2px #cccccc solid;
+    
+}
+
+/* Imagen */
+article>picture>img {
+    max-width: 90% !important;
+    margin-bottom: 1em;
+}
+
+/* Sección Catalogo
+   ========================= 
+section#catalogo {
+    text-align: center;
+    margin: 15px 0px;
+}*/
+
+/* Articulos
+   ========================= 
+article{
+    display: inline-block;
+    width: 23%;
+    min-width: 200px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    margin: 20px 10px;
+    border: 2px #cccccc solid;
+}
+article > h3 {
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    color: #0455BF; 
+} --*/
+
+/*.imgProduct {
+    width: 80%;
+    height: auto;
+}*/
+
+.precioOriginal {
+    font-size: 1.5em;
+    color: #4d4d4d;
+    text-decoration: line-through;
+}
+
+.precioDescuento {
+    font-size: 1.5em;
+    color: black;
+    font-weight: bold;
+}
+
+.precioFinal {
+    font-size: 1.5em;
+    color: #9c0000;
+    font-weight: bold;
+}
+
+/*  article>button {
+    padding: 10px 20px;
+    background-color: #484450;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}*/

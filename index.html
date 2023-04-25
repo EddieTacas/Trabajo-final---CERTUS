@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo productos - TripleHash</title>
+
+    <!-- Hoja de estilo personalizada -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Estilo de Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Estilo de Iconos Bootstrap -->
+    <link rel="stylesheet" href="font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <!-- Video de impresora
+    <div onclick="ocultarModalImpresora()" id="ImpresoraModal" style="display: none;"">
+        <div id=" ImpresoraVideo">
+        <video width="100%" src="video/productos/L3250.mp4" controls></video>
+    </div>
+    </div> -->
+
+    <!-- WhatsApp iniciar convsersación -->
+    <a id="chatWhatsApp" target="_blank" href="https://wa.me/51931238457?text=Hola%20quiero%20comprar%20ya!">
+        <img src="image/recursos/WhatsApp.svg" alt="Iniciar convsersación por WhatsApp">
+    </a>
+
+    <!-- Encabezado -->
+    <header class="text-center bg-dark text-white p-3">
+        <h1>TiendaCel</h1>
+        <h2>Seguridad, calidad y garantía</h2>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacténos</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#VentanaCarrito"><i
+                            class="bi bi-basket3"></i> Carrito</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ventana modal del carrito -->
+    <div class="modal fade" id="VentanaCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"></i>Carrito</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <picture>
+                        <img id="imageCarritoVacio" class="img-fluid mx-auto d-block"
+                            src="image/recursos/CarritoVacio.png" alt="Carrito Vacio">
+                    </picture>
+                    <p class="text-center">Actualmente usted no cuenta con ningún producto.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="limpiarCarrito()"><i class="bi bi-x-circle-fill"></i> Limpiar</button>
+                    <button type="button" class="btn btn-primary"><i class="bi bi-cart-check-fill"></i> Cotizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificación
+    <div id="barNotificaciones">Venta de productos - Smartphones</div>
+ -->
+
+    <!-- Contenido principal -->
+    <main class="container text-center bg-secondary-subtle">
+
+        <!-- Sesiones de contenido -->
+        <section id="catalogo" class="row py-5">
+
+            <!-- Articulo 01 -->
+            <article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+
+                <picture>
+                    <img class="img-fluid" src="image/productos/honor x7a.webp" alt="honor x7a">
+                </picture>
+
+                <h4>Honor x7a 128/256 gb 6gb</h4>
+                <p>
+                    <span class="precioOriginal">S/ 899.00</span> <span class="precioDescuento">-14%</span>
+                    <br><span class="precioFinal">S/ 769.00</span>
+                </p>
+                <button onclick="addCarrito(event)" class="btn btn-light"><i class="bi bi-bag-plus-fill"></i> Agregar al
+                    carrito</button>
+
+            </article>
+
+            <!-- Articulo 02 -->
+            <article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+
+                <!--<picture>
+                    <img onclick="mostrarModalImpresora()" class="img-fluid" src="image/productos/EP057EL128KOULPE.webp"
+                        alt="Cámara web">
+                </picture>-->
+
+
+                <picture>
+                    <img class="img-fluid" src="image/productos/galaxy s22.webp" alt="Galaxy s22">
+                </picture>
+
+                <h4>Galaxy s22 5g 128gb 8gb</h4>
+                <p>
+                    <span class="precioOriginal">S/ 3,999.00</span> <span class="precioDescuento">-29%</span>
+                    <br><span class="precioFinal">S/ 2,899.00</span>
+                </p>
+                <button onclick="addCarrito(event)" class="btn btn-light"><i class="bi bi-bag-plus-fill"></i> Agregar al
+                    carrito</button>
+
+            </article>
+
+            <!-- Articulo 03 -->
+            <article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+
+                <picture>
+                    <img class="img-fluid" src="image/productos/galaxy a13.webp" alt="galaxy a13">
+                </picture>
+
+                <h4>Galaxy a13 64gb 4 gb negro</h4>
+                <p>
+                    <span class="precioOriginal">S/ 799.00</span> <span class="precioDescuento">-26%</span>
+                    <br><span class="precioFinal">S/ 589.00</span>
+                </p>
+                <button onclick="addCarrito(event)" class="btn btn-light"><i class="bi bi-bag-plus-fill"></i> Agregar al
+                    carrito</button>
+
+            </article>
+
+            <!-- Articulo 04 -->
+            <article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+
+                <picture>
+                    <img class="img-fluid" src="image/productos/galaxy a33.webp" alt="Galaxy a33">
+                </picture>
+
+                <h4>Galaxy a33 5gb 5g 128gb 6gb negro</h4>
+                <p>
+                    <span class="precioOriginal">S/ 1,599.00</span> <span class="precioDescuento">-31%</span>
+                    <br><span class="precioFinal">S/ 1,099.00</span>
+                </p>
+                <button onclick="addCarrito(event)" class="btn btn-light"><i class="bi bi-bag-plus-fill"></i> Agregar al
+                    carrito</button>
+
+            </article>
+
+            <!-- Articulo 05 -->
+            <article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+
+                <picture>
+                    <img class="img-fluid" src="image/productos/iphone 14.webp" alt="iphone 14">
+                </picture>
+
+                <h4>Iphone 14 64gb</h4>
+                <p>
+                    <span class="precioOriginal">S/ 799</span> <span class="precioDescuento">-19%</span>
+                    <br><span class="precioFinal">S/ 689</span>
+                </p>
+                <button onclick="addCarrito(event)" class="btn btn-light"><i class="bi bi-bag-plus-fill"></i> Agregar al
+                    carrito</button>
+
+            </article>
+
+            <!-- Articulo 06 -->
+            <article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+
+                <picture>
+                    <img class="img-fluid" src="image/productos/honor x6s.webp" alt="Honor x6s">
+                </picture>
+
+                <h4>Honor x6s 128gb 4gb</h4>
+                <p>
+                    <span class="precioOriginal">S/ 799.00</span> <span class="precioDescuento">-19%</span>
+                    <br><span class="precioFinal">S/ 689.00</span>
+                </p>
+                <button onclick="addCarrito(event)" class="btn btn-light"><i class="bi bi-bag-plus-fill"></i> Agregar al
+                    carrito</button>
+
+            </article>
+            <!-- Articulo 07 -->
+            <article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+
+                <picture>
+                    <img class="img-fluid" src="image/productos/honor x7.webp" alt="honor x7">
+                </picture>
+
+                <h4>Honor x7 128gb 4gb</h4>
+                <p>
+                    <span class="precioOriginal">S/ 899.00</span> <span class="precioDescuento">-5%</span>
+                    <br><span class="precioFinal">S/ 849.00</span>
+                </p>
+                <button onclick="addCarrito(event)" class="btn btn-light"><i class="bi bi-bag-plus-fill"></i> Agregar al
+                    carrito</button>
+
+            </article>
+
+            <!-- Articulo 08 -->
+            <article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+
+                <picture>
+                    <img class="img-fluid" src="image/productos/galaxy a23.webp" alt="Galaxy a23">
+                </picture>
+
+                <h4>Galaxy a23 negro</h4>
+                <p>
+                    <span class="precioOriginal">S/ 829.00</span> <span class="precioDescuento">-36%</span>
+                    <br><span class="precioFinal">S/ 799.00</span>
+                </p>
+                <button onclick="addCarrito(event)" class="btn btn-light"><i class="bi bi-bag-plus-fill"></i> Agregar al
+                    carrito</button>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+
+    <footer class="container-fluid bg-dark text-white p-5">
+        <div class="container p-0">
+            <p class="float-end">
+                <a href="#">Volver arriba</a>
+            </p>
+            <p>Creado por Eddie Tacas Master and Media - 2023</p>
+        </div>
+    </footer>
+
+    <!-- AQUÍ VIENE EL JAVASCRIPT PREPARATE... -->
+    <script>
+        function mostrarModalImpresora() {
+            let modal = document.getElementById("ImpresoraModal");
+            modal.setAttribute("style", "display:block")
+        }
+        function ocultarModalImpresora() {
+            let modal = document.getElementById("ImpresoraModal");
+            modal.setAttribute("style", "display:none")
+        }
+    </script>
+
+    <!-- JavaScript de Bootstrap -->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Cargar Javascript personalizado -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
